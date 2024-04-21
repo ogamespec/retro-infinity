@@ -1,14 +1,13 @@
 {
-  "name": "Ogame Infinity",
-  "version": "0.0.0",
+  "name": "Retro Infinity",
+  "version": "0.84.0",
   "manifest_version": 2,
-  "description": "OGI - To Ogame's infinity and beyond!",
-  "homepage_url": "https://ogameinfinity.com",
+  "description": "OGI - To Ogame's infinity and before!",
 
   "content_scripts": [
     {
-      "exclude_matches": ["https://*.ogame.gameforge.com/game/admin2/*"],
-      "matches": ["https://*.ogame.gameforge.com/game/*"],
+      "exclude_matches": ["http://*/game/index.php?page=admin*"],
+      "matches": ["http://*/game/index.php?page=*"],
       "js": ["main.js"],
       "css": ["global.css"],
       "run_at": "document_start"
@@ -18,7 +17,7 @@
   "web_accessible_resources": ["ogkush.js", "libs/*", "assets/*", "util/*", "ctxpage/*", "ctxcontent/*"],
 
   "browser_action": {
-    "default_title": "Ogame Infinity",
+    "default_title": "Retro Infinity",
     "default_icon": {
       "32": "assets/images/logo128.png"
     }
@@ -30,8 +29,5 @@
     "256": "assets/images/logo512.png",
     "512": "assets/images/logo512.png"
   },
-  "permissions": ["storage", "https://*.ogame.gameforge.com/game/*"],
-  "background": {
-    "scripts": ["background.js"]
-  }
+  "permissions": ["storage", "http://*/game/index.php?page=*"]
 }

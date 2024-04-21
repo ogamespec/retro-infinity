@@ -3,22 +3,19 @@
     "default_icon": {
       "32": "assets/images/logo128.png"
     },
-    "default_title": "Ogame Infinity"
-  },
-  "background": {
-    "service_worker": "background.js"
+    "default_title": "Retro Infinity"
   },
   "content_scripts": [
     {
       "css": ["global.css"],
-      "exclude_matches": ["https://*.ogame.gameforge.com/game/admin2/*"],
+      "exclude_matches": ["http://*/game/index.php?page=admin*"],
       "js": ["main.js"],
-      "matches": ["https://*.ogame.gameforge.com/game/*"],
+      "matches": ["http://*/game/index.php?page=*"],
       "run_at": "document_start"
     }
   ],
-  "description": "OGI - To Ogame's infinity and beyond!",
-  "host_permissions": ["https://*.ogame.gameforge.com/game/*"],
+  "description": "OGI - To Ogame's infinity and before!",
+  "host_permissions": ["http://*/game/index.php?page=*"],
   "icons": {
     "512": "assets/images/logo512.png",
     "256": "assets/images/logo512.png",
@@ -26,15 +23,14 @@
     "32": "assets/images/logo128.png"
   },
   "manifest_version": 3,
-  "name": "Ogame Infinity",
+  "name": "Retro Infinity",
   "permissions": ["storage"],
-  "update_url": "https://clients2.google.com/service/update2/crx",
-  "version": "0.0.0",
   "web_accessible_resources": [
     {
       "extension_ids": ["hfojakphgokgpbnejoobfamojbgolcbo"],
       "matches": ["<all_urls>"],
       "resources": ["ogkush.js", "main.js", "libs/*", "assets/*", "util/*", "ctxpage/*", "ctxcontent/*"]
     }
-  ]
+  ],
+  "version": "0.84.0"
 }
