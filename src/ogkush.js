@@ -19088,14 +19088,14 @@ class AutoQueue extends Queue {
 }
 
 function versionInStatusBar() {
-  const siteFooterTextRight = document.querySelector("#siteFooter div.fright.textRight");
+  const siteFooterTextRight = document.querySelector("div#menu > p > nobr");
   if (!siteFooterTextRight) {
     return;
   }
 
   const version = createDOM("a", {
     class: "ogk-button-version",
-    href: `https://github.com/ogame-infinity/web-extension/releases/tag/v${VERSION}`,
+    href: `https://github.com/ogamespec/retro-infinity`,
     target: "_blank",
   });
   const icon = createDOM("div", { class: "ogk-icon" });
